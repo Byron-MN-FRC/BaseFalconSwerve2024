@@ -22,13 +22,13 @@ public class Swerve extends SubsystemBase {
     public SwerveModule[] mSwerveMods;
     public Pigeon2 gyro;
 
-    public final SlewRateLimiter xLimiter = new SlewRateLimiter(3);
-    public final SlewRateLimiter yLimiter = new SlewRateLimiter(3);
-    public final SlewRateLimiter turnLimiter = new SlewRateLimiter(3);
-    public final SlewRateLimiter balanceXLimiter = new SlewRateLimiter(1);
+    public final SlewRateLimiter xLimiter = new SlewRateLimiter(2);
+    public final SlewRateLimiter yLimiter = new SlewRateLimiter(2);
+    public final SlewRateLimiter turnLimiter = new SlewRateLimiter(2);
+    public final SlewRateLimiter balanceXLimiter = new SlewRateLimiter(2);
 
     public Swerve() {
-        gyro = new Pigeon2(Constants.Swerve.pigeonID,"CANivore1");
+        gyro = new Pigeon2(Constants.Swerve.pigeonID,"RoboRIO");
         gyro.configFactoryDefault();
         zeroGyro();
 
